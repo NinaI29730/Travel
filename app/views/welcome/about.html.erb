@@ -1,8 +1,4 @@
-<style>
-  body {
-    background: <%= @color %>;
-  }
-</style>
+
 <h1>This page will highlight the places I have traveled to or aspire to travel to along with the conferences I have attended over the past few years.</h1>
 <p>My favorite color is <%= @color %></p>
 <p>My shoe size is <%= @shoesize %></p>
@@ -11,7 +7,7 @@
 <% else %>
   <p>My shoe size is <%= @size %></p>
 <% end %>
-<% = @homeland %>
+<%= @homeland %>
 <ul>
 <% @countries.each do |country| %>
   <%= country %>
@@ -52,4 +48,5 @@
                           height: 300,
                           width: 400 %>
 </ul>
-<p>Find me in app/views/welcome/about.html.erb</p>
+<%= link_to "Blue", about_path, class: "btn btn-primary" %>
+<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>

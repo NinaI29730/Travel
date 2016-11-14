@@ -6,10 +6,11 @@ class WelcomeController < ApplicationController
 
   def about
   	@color = params[:color]
-  	@shoesize = params[:size].to_i
+  	@size = params[:size].to_i
   	@homeland = 'Augusta, GA, United States of America'
   	@countries = ['Bahamas','St. Kitts','Nigeria','Ghana','Guinea','Costa Rica','United States of America']
   end
-end
-end
+
+  def contact
+  end
 end
