@@ -1,6 +1,22 @@
 <h1>Welcome to my First Ruby on Rails Site!</h1>
 <p>My name is Nina Ivey Wilson. I have been a professional librarian for over 10 years. I have worked in K-12 Public School Media and Technology Centers, a Research HBCU Library, a Public Library, and a Non-Profit Organization’s Library. My interest include social justice, bridging the digital divide, data acquisition, data management, data warehousing, and knowledge discovery. With that said........</p>
 <p> I have acquired the urge to build my skill set in Technology. I really like web development and software development.  So I have just complete the inital code immersion course at Tech Talent South, where I learned web development using Ruby on Rails, Bootscrap, Javascript, and MySQL. </p>
+<table class="table">
+  <tr>
+    <% @united_states.each do |key,value| %>
+	  <th><%= key.titleize %></th>
+    <% end %>
+  </tr>
+  <tr>
+    <% @united_states.each do |key,value| %>      
+      <% if value.kind_of?(Array) %>
+          <td><%= value.join(", ") %></td>
+      <% else %>
+         <td><%= value %></td>
+      <% end %> 
+    <% end %>
+  </tr>
+</table>
 <% @travel_pics.each do |pic| %>
   <%= image_tag pic, class: "img-responsive" %>
 <% end %>

@@ -1,7 +1,10 @@
 class WelcomeController < ApplicationController
   def index
-  	@travel_pics = ['augusta.jpeg', 'bahamas.jpeg',
- 'ghana.jpg', 'costarica.jpeg', 'guinea.jpg', 'nigeria.jpg', 'st.kitts.jpg']
+  	@travel_pics = ['augusta.jpeg', 'bahamas.jpeg', 'ghana.jpg', 'costarica.jpeg', 'guinea.jpg', 'nigeria.jpg', 'st.kitts.jpg']
+    @united_states = {"capital city" => "Washington, DC", 
+                     "favorite city" => "Jacksonville, FL", 
+                     "favorite state" => "Florida", 
+                     "flag colors" => ["red", "white", "blue"]}
   end
 
   def about

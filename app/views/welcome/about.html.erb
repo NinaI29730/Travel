@@ -48,5 +48,7 @@
                           height: 300,
                           width: 400 %>
 </ul>
-<%= link_to "Blue", about_path, class: "btn btn-primary" %>
-<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
+<%= link_to "Welcome", welcome_path, class: "btn btn-primary" %>
+<%= link_to "Contact", contact_path(color: "pink"), class: "btn btn-primary" %>
+<%= link_to "Destinations", about_path(color: "black"), class: "btn btn-primary" %>
+<%= link_to "Online Portfolio", "https://ninawilsonmlis.wordpress.com", class: "btn btn-primary", target: "_blank", rel: "nofollow" %>
