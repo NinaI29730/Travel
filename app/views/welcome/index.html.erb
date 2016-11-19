@@ -20,4 +20,8 @@
 <% @travel_pics.each do |pic| %>
   <%= image_tag pic, class: "img-responsive" %>
 <% end %>
-
+<% @destinations.each do |destination| %>
+  <h2><%= destination.city %></h2>
+  <h3><%= destination.country %></h3>
+  <p><%= destination.description %></p>
+<% end %>

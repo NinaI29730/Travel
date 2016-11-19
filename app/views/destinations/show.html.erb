@@ -1,3 +1,5 @@
+<h1><%= @destination.city %>, <%= @destination.country %></h1>
+<h2>Population <%= @destination.population %></h2>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,9 +11,6 @@
   <strong>Country:</strong>
   <%= @destination.country %>
 </p>
-<strong>Population:</strong>
-<h1><%= @destination.city %>, <%= @destination.country %></h1>
-<h2>Population <%= @destination.population %></h2>
 
 <p>
   <strong>Description:</strong>
@@ -20,3 +19,7 @@
 
 <%= link_to 'Edit', edit_destination_path(@destination) %> |
 <%= link_to 'Back', destinations_path %>
+<h1><%= @destination.city %>, <%= @destination.country %></h1>
+<%= image_tag @destination.avatar.url %>
+
+<p> <%= @destination.description %></p>
